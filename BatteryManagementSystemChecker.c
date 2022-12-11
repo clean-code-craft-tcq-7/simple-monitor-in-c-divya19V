@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <assert.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
