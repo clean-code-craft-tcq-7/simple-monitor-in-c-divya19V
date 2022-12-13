@@ -21,17 +21,17 @@ int batteryChargerateCheck(float chargeRate) {
     return 1;
 }
 
-int printBatteryTemperatureCheckStatus(float temperature){
+void printBatteryTemperatureCheckStatus(float temperature){
   if(!batteryTemperatureCheck(temperature))
      printf("Temperature out of range!\n"); 
 }
 
-int printBatterySOCCheckStatus(float soc){
+void printBatterySOCCheckStatus(float soc){
   if(!batterySOCCheck(soc))
     printf("State of Charge out of range!\n");
 }
 
-int printBatteryChargeRateCheckStatus(float chargeRate){
+void printBatteryChargeRateCheckStatus(float chargeRate){
   if(!batteryChargerateCheck(chargeRate))
     printf("Charge Rate out of range!\n");
 }
