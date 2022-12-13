@@ -2,6 +2,8 @@
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   if(!batteryTemperatureCheck(temperature))
+  if(!batterySOCCheck(soc))
+  if(!batteryChargerateCheck(chargeRate))
     return 0;
 }
 
