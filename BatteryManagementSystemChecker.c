@@ -1,4 +1,5 @@
-
+#include "BatteryManagementSystemChecker.h"
+#include "BatteryManagementSystemSupportFile.c"
 #include <assert.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
