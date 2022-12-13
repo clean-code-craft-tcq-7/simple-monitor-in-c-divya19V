@@ -3,6 +3,6 @@
 int batteryTemperatureCheck(float temperature);
 int batterySOCCheck(float soc);
 int batteryChargerateCheck(float chargeRate);
-int printBatteryTemperatureCheckStatus(float temperature);
-int printBatterySOCCheckStatus(float soc);
-int printBatteryChargeRateCheckStatus(float chargeRate);
+void printBatteryTemperatureCheckStatus(float temperature);
+void printBatterySOCCheckStatus(float soc);
+void printBatteryChargeRateCheckStatus(float chargeRate);
