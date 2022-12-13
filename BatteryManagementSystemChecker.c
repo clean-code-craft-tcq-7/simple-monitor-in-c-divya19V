@@ -1,7 +1,7 @@
 #include <assert.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  if(!batteryTemperatureCheck(temperature) && !batterySOCCheck(soc) && !batteryChargerateCheck(chargeRate))
+  if(!batteryTemperatureCheck(temperature))
     return 0;
 }
 
