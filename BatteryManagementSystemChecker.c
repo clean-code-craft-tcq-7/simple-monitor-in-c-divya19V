@@ -6,12 +6,9 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   int batteryCheckStatus = batterySOCCheck(soc);
   int chargerateCheckStatus = batteryChargerateCheck(chargeRate);
   
-  int batteryIsOk = tempCheckStatus & batteryCheckStatus & chargerateCheckStatus;
+  int batteryIsOkStatus = ((tempCheckStatus & batteryCheckStatus) & chargerateCheckStatus);
   
-  if (batteryIsOk) 
-    return 1;
-  else 
-    return 0;
+  return batteryIsOkStatus;
 }
 
 int main() {
