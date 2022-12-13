@@ -9,8 +9,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
           }
       }
   }
-  else 
-    return 1;
+  return 1;
 }
 
 int main() {
@@ -19,5 +18,5 @@ int main() {
   printBatteryTemperatureCheckStatus(50);
   printBatterySOCCheckStatus(85);
   printBatteryChargeRateCheckStatus(0);
-  //assert(!batteryIsOk(50, 85, 0));
+  assert(!batteryIsOk(50, 85, 0));
 }
