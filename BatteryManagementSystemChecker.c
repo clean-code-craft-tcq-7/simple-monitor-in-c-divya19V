@@ -1,4 +1,4 @@
-#include "BatteryManagementSystemChecker.h"
+#include "BatteryManagementSystemChecked.h"
 #include "BatteryManagementSystemSupportFile.c"
 #include <assert.h>
 
