@@ -8,7 +8,6 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
           }
       }
   }
-  return 1;
 }
 
 int main() {
