@@ -13,46 +13,24 @@
 #define TRUE 1
 #define FALSE 0
 
-bool TEMPERATUREWARNINGSET 0
-bool SOCWARNINGSET 0
-bool CHARGERATEWARNINGSET 0
+/*
+bool TEMPERATUREHIGHWARNINGSET FALSE
+bool TEMPERATURELOWWARNINGSET FALSE
+bool SOCLOWWARNINGSET FALSE
+bool SOCHIGHWARNINGSET FALSE
+bool CHARGERATEWARNINGSET FALSE
+*/
+int printStatementsIndex = 0;
 
-  
-bool batteryTemperatureCheckForError(float temperature) {
-  if (temperature < TEMP_MIN_LIMIT || temperature > TEMP_MAX_LIMIT) 
-     return FALSE;
-  else 
-    return TRUE;
-}
-
-bool batteryTemperatureCheckForWarnings(float temperature) {
-  if ((temperature <= TEMP_MIN_LIMIT+TEMP_TOLERANCE_UPRLIMIT && temperature >= TEMP_MIN_LIMIT) || 
-      (temperature >= TEMP_MAX_LIMIT-TEMP_TOLERANCE_UPRLIMIT && temperature <= TEMP_MAX_LIMIT))
-    TEMPERATUREWARNINGSET = TRUE;
-}
-
-bool batterySOCCheckForError(float soc) {
-  if(soc < SOC_MIN_LIMIT || soc > SOC_MAX_LIMIT) 
-    return FALSE;
-  else
-    return TRUE;
-}
-
-bool batterySOCCheckForWarnings(float soc) {
-  if((soc >= SOC_MIN_LIMIT && soc <= SOC_MIN_LIMIT+SOC_TOLERANCE_UPRLIMIT) ||
-    (soc <= SOC_MAX_LIMIT && soc >= SOC_MAX_LIMIT-SOC_TOLERANCE_UPRLIMIT))
-    SOC_TOLERANCE_UPRLIMIT = TRUE;
-}
-
-
-bool batteryChargerateCheckForError(float chargeRate) {
-  if(chargeRate > CHARGERATE_MAX_LIMIT)
-    return FALSE;
-  else
-    return TRUE;
-}
-
-bool batteryChargerateCheckForWarnings(float chargeRate) {
-  if(chargeRate <= CHARGERATE_MAX_LIMIT && chargeRate >= CHARGERATE_MAX_LIMIT-CHARGERATE_TOLERANCE_UPRLIMIT)
-   CHARGERATEWARNINGSET = TRUE;
+/*
+bool TEMPHIGHBREACH FALSE
+bool TEMPLOWBREACH FALSE
+bool SOCHIGHBREACH FALSE
+bool SOCHIGHBREACH FALSE
+bool CHARGERATEBREACH FALSE
+*/
+const char* printStatements[3][5] = {
+          ("LOW_TEMP_BREACH", "LOW_TEMP_WARNING", "NORMAL", "HIGH_TEMP_WARNING", "HIGH_TEMP_BREACH"),
+          ("LOW_SOC_BREACH", "LOW_SOC_WARNING", "NORMAL", "HIGH_SOC_WARNING", "HIGH_SOC_BREACH"),
+          (" ", " ", "NORMAL", "HIGH_SOC_WARNING", "HIGH_SOC_BREACH")
 }
