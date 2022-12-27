@@ -49,7 +49,7 @@ Can we add new functionality without disturbing the old?
 - Sensors may be from different vendors with different accuracy
 - Predicting the future requires Astrology!
 
-##Implement Extensions 
+## Implement Extensions 
 
 - Early Warning
 - Support a language in addition to English
