@@ -26,6 +26,8 @@ typedef struct printStatementDetails {
     unsigned int col; 
 }printStatementsIndex;
 
+printStatementsIndex printStatementsIndex1;
+
 /*
 bool TEMPHIGHBREACH FALSE
 bool TEMPLOWBREACH FALSE
