@@ -22,10 +22,8 @@ bool CHARGERATEWARNINGSET FALSE
 */
 
 typedef struct printStatementDetails {
-          unsigned int row;
-          unsigned int col;
-          unsigned int paramIndex;
-          
+    unsigned int row;
+    unsigned int col; 
 }printStatementsIndex;
 
 /*
