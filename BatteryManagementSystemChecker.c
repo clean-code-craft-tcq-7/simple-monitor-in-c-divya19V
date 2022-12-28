@@ -2,9 +2,9 @@
 #include <assert.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  int tempCheckStatus = batteryTemperatureCheckForError(temperature);
-  int batteryCheckStatus = batterySOCCheckForError(soc);
-  int chargerateCheckStatus = batteryChargerateCheckForError(chargeRate);
+  int tempCheckStatus = batteryTemperatureCheck(temperature);
+  int batteryCheckStatus = batterySOCCheck(soc);
+  int chargerateCheckStatus = batteryChargerateCheck(chargeRate);
   
   int batteryIsOkStatus = ((tempCheckStatus && batteryCheckStatus) && chargerateCheckStatus);
   
