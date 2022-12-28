@@ -20,7 +20,13 @@ bool SOCLOWWARNINGSET FALSE
 bool SOCHIGHWARNINGSET FALSE
 bool CHARGERATEWARNINGSET FALSE
 */
-int printStatementsIndex = 0;
+
+typedef struct printStatementDetails {
+          unsigned int row;
+          unsigned int col;
+          unsigned int paramIndex;
+          
+}printStatementsIndex;
 
 /*
 bool TEMPHIGHBREACH FALSE
