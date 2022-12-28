@@ -1,4 +1,4 @@
-#include "BatteryManagementSystemSupportFile.c"
+#include "BatteryManagementSystemSupportFile.h"
 
 bool batteryTemperatureCheckForError(float temperature) {
   if (temperature < TEMP_MIN_LIMIT) {
