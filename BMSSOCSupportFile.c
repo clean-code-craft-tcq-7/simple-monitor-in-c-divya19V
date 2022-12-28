@@ -1,4 +1,4 @@
-#include "BatteryManagementSystemSupportFile.c"
+#include "BatteryManagementSystemSupportFile.h"
 
 bool batterySOCCheckForError(float soc) {
   if(soc < SOC_MIN_LIMIT) {
