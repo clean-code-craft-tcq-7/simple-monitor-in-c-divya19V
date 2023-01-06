@@ -1,7 +1,6 @@
 #include "BatteryManagementSystemSupportFile.h"
 
 bool batteryTemperatureCheck(float temperature) {
-  printStatementsIndex printStatementsIndex1;
   
   if (temperature < TEMP_MIN_LIMIT) {
     printStatementsIndex1.row = 0;
