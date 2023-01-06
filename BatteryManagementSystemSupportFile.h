@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#define TEMP_MIN_LIMIT 0
+#define TEMP_MAX_LIMIT 45
+#define SOC_MIN_LIMIT 20
+#define SOC_MAX_LIMIT 80
+#define CHARGERATE_MAX_LIMIT 0.8
+
+#define TEMP_TOLERANCE_UPRLIMIT (TEMP_MAX_LIMIT*0.05)
+#define SOC_TOLERANCE_UPRLIMIT (SOC_MAX_LIMIT*0.05)
+#define CHARGERATE_TOLERANCE_UPRLIMIT (CHARGERATE_MAX_LIMIT*0.05)
+
+#define TRUE 1
+#define FALSE 0
+
+/*
+bool TEMPERATUREHIGHWARNINGSET FALSE
+bool TEMPERATURELOWWARNINGSET FALSE
+bool SOCLOWWARNINGSET FALSE
+bool SOCHIGHWARNINGSET FALSE
+bool CHARGERATEWARNINGSET FALSE
+*/
+
+typedef struct printStatementDetails {
+    unsigned int row;
+    unsigned int col; 
+}printStatementsIndex;
+
+printStatementsIndex printStatementsIndex1;
+
+/*
+bool TEMPHIGHBREACH FALSE
+bool TEMPLOWBREACH FALSE
+bool SOCHIGHBREACH FALSE
+bool SOCHIGHBREACH FALSE
+bool CHARGERATEBREACH FALSE
+*/
+const char* printStatements[3][5] = {
+          ("LOW_TEMP_BREACH", "LOW_TEMP_WARNING", "NORMAL", "HIGH_TEMP_WARNING", "HIGH_TEMP_BREACH"),
+          ("LOW_SOC_BREACH", "LOW_SOC_WARNING", "NORMAL", "HIGH_SOC_WARNING", "HIGH_SOC_BREACH"),
+          (" ", " ", "NORMAL", "HIGH_SOC_WARNING", "HIGH_SOC_BREACH")
+}
